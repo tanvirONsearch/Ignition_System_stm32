@@ -1,0 +1,3 @@
+../Core/Src/cylinder_scheduler.c:31:9:CylinderScheduler_GetCurrent	24	static
+../Core/Src/cylinder_scheduler.c:45:5:CylinderScheduler_GetIgnitionAngle	24	static
+../Core/Src/cylinder_scheduler.c:55:6:CylinderScheduler_SetIgnitionAngle	24	static

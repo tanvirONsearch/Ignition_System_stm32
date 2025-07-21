@@ -1,0 +1,4 @@
+../Core/Src/ignition_state_machine.c:12:6:ISM_Init	1
+../Core/Src/ignition_state_machine.c:22:6:ISM_Update	14
+../Core/Src/ignition_state_machine.c:319:6:ISM_IndexDetected	1
+../Core/Src/ignition_state_machine.c:324:6:ISM_IsCoilOn	1

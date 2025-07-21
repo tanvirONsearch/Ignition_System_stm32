@@ -1,0 +1,3 @@
+../Core/Src/cylinder_scheduler.c:31:9:CylinderScheduler_GetCurrent	3
+../Core/Src/cylinder_scheduler.c:45:5:CylinderScheduler_GetIgnitionAngle	3
+../Core/Src/cylinder_scheduler.c:55:6:CylinderScheduler_SetIgnitionAngle	3

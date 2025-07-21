@@ -1,0 +1,5 @@
+../Core/Src/submain.c:20:6:init	2
+../Core/Src/submain.c:73:6:loop	1
+../Core/Src/submain.c:97:6:HAL_GPIO_EXTI_Callback	1
+../Core/Src/submain.c:104:6:HAL_TIM_IC_CaptureCallback	2
+../Core/Src/submain.c:112:6:HAL_TIM_PeriodElapsedCallback	2

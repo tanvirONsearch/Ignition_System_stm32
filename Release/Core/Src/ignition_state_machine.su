@@ -1,0 +1,4 @@
+../Core/Src/ignition_state_machine.c:12:6:ISM_Init	0	static
+../Core/Src/ignition_state_machine.c:22:6:ISM_Update	16	static
+../Core/Src/ignition_state_machine.c:319:6:ISM_IndexDetected	0	static
+../Core/Src/ignition_state_machine.c:324:6:ISM_IsCoilOn	0	static

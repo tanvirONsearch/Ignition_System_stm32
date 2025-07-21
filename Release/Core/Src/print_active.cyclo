@@ -1,0 +1,2 @@
+../Core/Src/print_active.c:19:1:__io_putchar	1
+../Core/Src/print_active.c:25:1:__io_getchar	1

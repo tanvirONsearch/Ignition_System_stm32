@@ -1,0 +1,5 @@
+../Core/Src/submain.c:20:6:init	88	static
+../Core/Src/submain.c:72:6:loop	8	static
+../Core/Src/submain.c:96:6:HAL_GPIO_EXTI_Callback	0	static
+../Core/Src/submain.c:103:6:HAL_TIM_IC_CaptureCallback	0	static
+../Core/Src/submain.c:111:6:HAL_TIM_PeriodElapsedCallback	0	static

@@ -1,0 +1,9 @@
+../Core/Src/ignition_system.c:27:11:IS_Init	8	static
+../Core/Src/ignition_system.c:48:11:IS_HandleError	32	static
+../Core/Src/ignition_system.c:62:11:IS_UpdateRPM	12	static
+../Core/Src/ignition_system.c:97:11:IS_CalculatePulseTime	24	static
+../Core/Src/ignition_system.c:122:11:IS_ControlCoil	32	static
+../Core/Src/ignition_system.c:280:11:IS_UART_Debug	336	static
+../Core/Src/ignition_system.c:296:6:IS_TIM_IC_CaptureCallback	0	static
+../Core/Src/ignition_system.c:314:6:IS_TIM_PeriodElapsedCallback	0	static
+../Core/Src/ignition_system.c:322:6:IS_EXTI_Callback	16	static

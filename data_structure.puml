@@ -1,0 +1,61 @@
+@startuml
+title Ignition System Data Structure Diagram
+
+class IgnitionSystem {
+  +IS_Config cfg
+  +IS_State state
+}
+
+class IS_Config {
+  +TIM_HandleTypeDef *encoder_timer
+  +TIM_HandleTypeDef *time_base_timer
+  +TIM_HandleTypeDef *input_capture_timer
+  +UART_HandleTypeDef *uart
+  +GPIO_TypeDef *coil_gpio_port
+  +uint16_t coil_gpio_pin
+  +int ignition_angle
+  +const int coil_dwell
+}
+
+class IS_State {
+  +int pulses
+  +double totalTimeMs
+  +unsigned int rpm
+  +unsigned int frequency
+  +unsigned int ticks
+  +unsigned int pulse_time1
+  +unsigned int pulse_time2
+  +unsigned short count_overflow
+  +unsigned short frequency_status
+  +EngineState engine_state
+  +CoilState coil_state
+  +unsigned int encoder_last_position
+  +unsigned int timestamp_last_position
+  +unsigned int charge_begin_position
+  +int index_detected
+  +unsigned int tim4_frequency
+}
+
+enum IS_Status {
+  IS_OK
+  IS_ERROR_NULL_PTR
+  IS_ERROR_INVALID_STATE
+  IS_ERROR_UNKNOWN
+}
+
+enum EngineState {
+  ENGINE_STOPPED
+  ENGINE_RUNNING
+}
+
+enum CoilState {
+  COIL_OFF
+  COIL_ON
+}
+
+IgnitionSystem --> IS_Config
+IgnitionSystem --> IS_State
+IS_State --> EngineState
+IS_State --> CoilState
+
+@enduml

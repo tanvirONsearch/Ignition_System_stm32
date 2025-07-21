@@ -1,0 +1,44 @@
+@startuml
+title STM32-Based 12-Cylinder Ignition System
+
+skinparam rectangle {
+  BackgroundColor #EAF2F8
+  BorderColor Black
+}
+
+actor "Engine Crankshaft" as crank
+
+rectangle "STM32 MCU\n(Core Logic)" {
+    rectangle "Encoder Timer\n(TIM1)" as enc
+    rectangle "Input Capture Timer\n(TIM4)" as ict
+    rectangle "Time Base Timer\n(TIM5)" as tbt
+    rectangle "ADC1\n(Battery Voltage)" as adc
+    rectangle "Cylinder Scheduler\n& State Machine" as sched
+    rectangle "Ignition Control Logic" as ign
+    rectangle "UART\n(Debug Output)" as uart
+}
+
+rectangle "12x Ignition Coils" as coils {
+    rectangle "Coil 1 → Coil 12" as coilpins
+}
+
+crank --> enc : Crank signal (encoder pulses)
+enc --> sched : Encoder Position
+tbt --> sched : Time interval (RPM check)
+ict --> sched : Pulse period (frequency)
+adc --> sched : Battery Voltage
+sched --> ign : Cylinder No & Angle
+ign --> coilpins : Activate/Deactivate coils
+ign --> uart : Send debug data
+
+note right of sched
+- Firing Order Logic
+- Per-cylinder Ignition Angle
+- Dwell Pulse Calculation
+end note
+
+note bottom of coilpins
+GPIOB PIN0–PIN11
+end note
+
+@enduml

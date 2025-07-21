@@ -1,0 +1,3 @@
+../Core/Src/votage_map.c:24:5:Lookup_IgnitionAngle	0	static
+../Core/Src/votage_map.c:56:10:Lookup_DwellTime	0	static
+../Core/Src/votage_map.c:78:7:Read_BatteryVoltage	8	static

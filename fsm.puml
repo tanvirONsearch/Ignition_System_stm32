@@ -1,0 +1,14 @@
+@startuml
+title STM32 Ignition System - State Machine
+
+[*] --> IDLE : Startup / Reset
+
+IDLE --> COIL_CHARGING : Index pulse detected\nISM_IndexDetected()
+COIL_CHARGING --> IGNITION : encoder ≥ ignition_angle - dwell_pulses
+IGNITION --> IDLE : encoder ≥ ignition_angle
+
+state IDLE
+state COIL_CHARGING
+state IGNITION
+
+@enduml
