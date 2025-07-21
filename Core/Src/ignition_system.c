@@ -123,7 +123,7 @@ IS_Status IS_ControlCoil(IgnitionSystem *sys) {
     if (!sys)
         return IS_ERROR_NULL_PTR;
 
-    if (sys->state.engine_state == ENGINE_STOPPED) {
+    if (sys->state.engine_state == ENGINE_STOPPED || sys->state.rpm < CONF_MIN_RPM) {
         for (int i = 0; i < TOTAL_CYLINDERS; ++i) {
             HAL_GPIO_WritePin(sys->cfg.coil_ports[i], sys->cfg.coil_pins[i], GPIO_PIN_RESET);
             sys->state.coil_state[i] = COIL_OFF;

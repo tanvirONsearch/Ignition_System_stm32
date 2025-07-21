@@ -2,7 +2,7 @@
 ../Core/Src/ignition_system.c:48:11:IS_HandleError	3
 ../Core/Src/ignition_system.c:62:11:IS_UpdateRPM	7
 ../Core/Src/ignition_system.c:97:11:IS_CalculatePulseTime	4
-../Core/Src/ignition_system.c:122:11:IS_ControlCoil	11
+../Core/Src/ignition_system.c:122:11:IS_ControlCoil	12
 ../Core/Src/ignition_system.c:280:11:IS_UART_Debug	5
 ../Core/Src/ignition_system.c:296:6:IS_TIM_IC_CaptureCallback	4
 ../Core/Src/ignition_system.c:314:6:IS_TIM_PeriodElapsedCallback	2

@@ -96,7 +96,7 @@
 
 /*from ignition_system.c ----------------------*/
 #define RPM_SAMPLE_INTERVAL 5000 // 5 ms //50ms previos
-
+#define CONF_MIN_RPM 200
 
 
 /*ignition_system.h---------------------------*/
